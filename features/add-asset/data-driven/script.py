@@ -43,29 +43,36 @@ class Helper():
         
         select_department = driver.find_element(By.ID, "department-select")
         
-        add_asset = driver.find_element(By.ID, "btn-add-asset").click()
+        driver.find_element(By.ID, "btn-add-asset").click()
         
         # ActionChains(driver).move_to_element(select_department).click()
         # time.sleep(10000)
         
         # ActionChains(driver).move_to_element(department_select).click()
         
-        name = driver.find_element(By.ID, "control-ref_name").click()
+        name = driver.find_element(By.ID, "control-ref_name")
         name.send_keys(aname)
         
-        department = driver.find_element(By.ID, "control-ref_department_id").click()
-        name.send_keys(adepartment)
+        department = driver.find_element(By.ID, "control-ref_department_id")
+        department.click()
+        time.sleep(1)
+        department.send_keys(Keys.ENTER)
         
-        atype = driver.find_element(By.ID, "control-ref_type")
+        type = driver.find_element(By.ID, "control-ref_type")
+        type.send_keys(atype)
+        
         status = driver.find_element(By.ID, "control-ref_status")
+        status.send_keys(astatus)
+        
         description = driver.find_element(By.ID, "control-ref_description")
+        description.send_keys(adescription)
+        
         note = driver.find_element(By.ID, "control-ref_status_note")
+        note.send_keys(anote)
         
-        time.sleep(10000)
+        driver.find_element(By.ID, "submit-add-asset").click()
         
-        # ActionChains(driver).move_to_element(name).click().send_keys(
-        #     aname
-        # ).move_to_element(department).click()
+        time.sleep(1)
         
         
 class TestDrive(unittest.TestCase):
