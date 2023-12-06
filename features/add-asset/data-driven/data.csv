@@ -1,0 +1,8 @@
+name,department,type,status,description,note,expected
+a,H6,TypeB,Fine,Sample Description,Note2,success
+ab,H6,TypeC,Fine,Sample Description,Note3,success
+Sample Name,H6,TypeD,Fine,Sample Description,Note4,success
+a bit longer name that is below the limit,H6,TypeE,Fine,Sample Description,Note5,success
+Some words that make you sound SmARt Some words that make you sound SmARt Some words that make you sound SmARt Some words thatm,H6,TypeF,Fine,Sample Description,Note6,success
+This name is longer than the allowed limit for the name field and exceeds it by a bit,H6,TypeG,Fine,Sample Description,Note7,failure
+,H6,TypeA,Fine,Sample Description,Note1,failure
